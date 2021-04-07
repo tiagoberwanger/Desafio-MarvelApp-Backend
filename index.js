@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
-const CharactersController = require('./src/controllers/CharactersController')
+const MarvelController = require('./src/controllers/MarvelController')
 const port = process.env.PORT || 3001
 
 app.use(express.json());
 
-app.use('/character', CharactersController);
+app.use('/', MarvelController);
 
 app.listen(port, () => console.log(`Running at ${port}`))
