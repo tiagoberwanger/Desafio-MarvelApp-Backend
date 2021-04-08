@@ -12,7 +12,7 @@ const getCharacterByName = async (req, res) => {
   const { q } = req.query;
   const character = await characterByName(q);
   if (!character || character.length === 0) {
-    return res.status(NOT_FOUND).json({ message: 'character not found' })
+    return res.status(NOT_FOUND).json({ message: 'Personagem não encontrado' })
   }
   return res.status(STATUS_OK).json(character);
 }
