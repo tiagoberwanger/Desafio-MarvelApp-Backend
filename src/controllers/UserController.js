@@ -11,6 +11,7 @@ const {
   createUser,
   getUsers,
   getUserById,
+  updateUser
 } = require('../services/UserService');
 
 UserController.post('/user', UserValidation, createUser);
@@ -18,5 +19,7 @@ UserController.post('/user', UserValidation, createUser);
 UserController.get('/user', TokenValidation, getUsers);
 
 UserController.get('/user/:id', TokenValidation, getUserById);
+
+UserController.put('/user/:id', updateUser);
 
 module.exports = UserController;

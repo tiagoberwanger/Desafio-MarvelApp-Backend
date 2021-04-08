@@ -16,13 +16,21 @@ const characterByName = async (name) =>{
 }
 
 const allComics = async () =>{
+  console.log(hashResult)
   const comics = await fetch(`https://gateway.marvel.com:443/v1/public/comics?ts=${ts}&apikey=${publicKey}&hash=${hashResult}`,{ method: "GET", headers:{ "Content-Type": "application/json"}})
   .then((response)=>response.json());
   return comics.data.results;
 }
 
+const comicByName = async (title) =>{
+  const comic = await fetch(`https://gateway.marvel.com:443/v1/public/comics?ts=${ts}&apikey=${publicKey}&hash=${hashResult}&title=${title}`,{ method: "GET", headers:{ "Content-Type": "application/json"}})
+  .then((response)=>response.json())
+  return comic.data.results;
+}
+
 module.exports = {
   characterByName,
   allCharacters,
-  allComics
+  allComics,
+  comicByName
 };

@@ -3,6 +3,7 @@ const TokenCreation = require('../auth/TokenCreation');
 
 const STATUS_OK = 200;
 const STATUS_CREATED = 201;
+const STATUS_UNAUTHORIZED = 401;
 const NOT_FOUND = 404;
 const CONFLICT = 409;
 
@@ -33,8 +34,26 @@ const getUserById = async (req, res) => {
   res.status(STATUS_OK).json(user);
 };
 
+const updateUser = async (req, res) => {
+  const { username, email, password } = req.body;
+
+  const user = await Users.findOne({ where: { email } });
+  if(!user) {
+    return res.status(STATUS_UNAUTHORIZED).json({ message: 'Usuário não autorizado' });
+  }
+
+  await Users.update(
+    { username, password },
+    {
+      where: { email },
+    },
+  );
+  res.status(STATUS_OK).json({ message: 'usuário atualizado' });
+}
+
 module.exports = {
   createUser,
   getUsers,
   getUserById,
+  updateUser
 };
