@@ -4,7 +4,7 @@ const BAD_REQUEST = 400;
 const INTERNAL_ERROR = 500;
 
 const schema = Joi.object({
-  username: Joi.string().min(8),
+  username: Joi.string().min(8).required(),
   email: Joi.string().email({ tlds: { allow: true } }).required(),
   password: Joi.string().min(6).required(),
 });
