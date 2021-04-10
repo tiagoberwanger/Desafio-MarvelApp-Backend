@@ -9,28 +9,28 @@ const allCharacters = async () =>{
   return characters.data.results;
 }
 
-const characterByName = async (name) =>{
-  const character = await fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hashResult}&name=${name}`,{ method: "GET", headers:{ "Content-Type": "application/json"}})
+const characterById = async (id) =>{
+  const character = await fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hashResult}&id=${id}`,{ method: "GET", headers:{ "Content-Type": "application/json"}})
   .then((response)=>response.json())
   return character.data.results;
 }
 
 const allComics = async () =>{
-  console.log(hashResult)
   const comics = await fetch(`https://gateway.marvel.com:443/v1/public/comics?ts=${ts}&apikey=${publicKey}&hash=${hashResult}`,{ method: "GET", headers:{ "Content-Type": "application/json"}})
   .then((response)=>response.json());
   return comics.data.results;
 }
 
-const comicByName = async (title) =>{
-  const comic = await fetch(`https://gateway.marvel.com:443/v1/public/comics?ts=${ts}&apikey=${publicKey}&hash=${hashResult}&title=${title}`,{ method: "GET", headers:{ "Content-Type": "application/json"}})
+const comicById = async (id) =>{
+  const comic = await fetch(`https://gateway.marvel.com:443/v1/public/comics?ts=${ts}&apikey=${publicKey}&hash=${hashResult}&id=${id}`,{ method: "GET", headers:{ "Content-Type": "application/json"}})
   .then((response)=>response.json())
+  console.log(comic)
   return comic.data.results;
 }
 
 module.exports = {
-  characterByName,
+  characterById,
   allCharacters,
   allComics,
-  comicByName
+  comicById
 };
