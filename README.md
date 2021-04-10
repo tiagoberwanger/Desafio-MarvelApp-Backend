@@ -18,10 +18,6 @@
 - [x] Requisição de um comic específico
 - [x] Requisição de um character específico
 
-# Demonstração da Aplicação
-
-(GIF DA APLICAÇÂO)
-
 # Pré-requisitos e como rodar a aplicação localmente
 
 ### Clone este repositório
