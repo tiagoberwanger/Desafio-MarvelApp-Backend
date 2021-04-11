@@ -8,7 +8,7 @@
 
 - [x] Cadastro de novos usuários
 - [x] Atualização de usuários
-- [x] Autenticação de Login
+- [x] Autenticação de login
 - [x] Geração de token JWT
 - [x] Validação do token com JWT
 - [x] Validação dos campos do usuário com JOI
