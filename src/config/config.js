@@ -6,7 +6,7 @@ require('dotenv').config();
 //     password: process.env.MYSQL_PASSWORD,
 //     database: process.env.DATABASE,
 //     host: process.env.HOSTNAME,
-//     dialect: 'mysql',
+//     dialect: 'mysql',her
 //   },
 //   test: {
 //     username: process.env.MYSQL_USER,
