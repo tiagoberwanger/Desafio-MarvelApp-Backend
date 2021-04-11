@@ -9,8 +9,8 @@
 - [x] Cadastro de novos usuários
 - [x] Atualização de usuários
 - [x] Autenticação de Login
-- [x] Geração de Token JWT
-- [x] Validação do token com JOI
+- [x] Geração de token JWT
+- [x] Validação do token com JWT
 - [x] Validação dos campos do usuário com JOI
 - [x] Validação dos campos do login com JOI
 - [x] Requisição de todos os comics
