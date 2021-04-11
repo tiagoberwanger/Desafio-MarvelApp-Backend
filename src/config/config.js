@@ -11,6 +11,7 @@ module.exports = {
     host: process.env.HOSTNAME,
     // dialect: 'mysql',
     dialect: 'postgres',
+    use_env_variable: "DATABASE_URL"
   },
   test: {
     // username: process.env.MYSQL_USER,
@@ -22,6 +23,7 @@ module.exports = {
     host: process.env.HOSTNAME,
     // dialect: 'mysql',
     dialect: 'postgres',
+    use_env_variable: "DATABASE_URL"
   },
   production: {
     // username: process.env.MYSQL_USER,
@@ -33,5 +35,6 @@ module.exports = {
     host: process.env.HOSTNAME,
     // dialect: 'mysql',
     dialect: 'postgres',
+    use_env_variable: "DATABASE_URL"
   },
 };
