@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 const { hash, ts, publicKey } = require('../auth/hashAPI')
 
-const hashResult = hash();
+const hashResult = JSON.stringify(hash());
 
 const allCharacters = async () =>{
   const characters = await fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hashResult}`,{ method: "GET", headers:{ "Content-Type": "application/json"}})
