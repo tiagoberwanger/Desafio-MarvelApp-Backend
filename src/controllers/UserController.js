@@ -14,7 +14,7 @@ const {
   updateUser
 } = require('../services/UserService');
 
-UserController.post('/user', UserValidation, createUser);
+UserController.post('/register', UserValidation, createUser);
 
 UserController.get('/user', TokenValidation, getUsers);
 
