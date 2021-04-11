@@ -31,7 +31,7 @@ module.exports = {
     database: 'dgvo7tudsso2s',
     host: 'ec2-54-224-120-186.compute-1.amazonaws.com',
     dialect: 'postgres',
-    use_env_variable: DATABASE_URL,
+    use_env_variable: 'DATABASE_URL',
     dialectOptions: {
       "ssl": {
         "require": true,
@@ -45,7 +45,7 @@ module.exports = {
     database: 'dgvo7tudsso2s',
     host: 'ec2-54-224-120-186.compute-1.amazonaws.com',
     dialect: 'postgres',
-    use_env_variable: DATABASE_URL,
+    use_env_variable: 'DATABASE_URL',
     dialectOptions: {
       "ssl": {
         "require": true,
@@ -59,7 +59,7 @@ module.exports = {
     database: 'dgvo7tudsso2s',
     host: 'ec2-54-224-120-186.compute-1.amazonaws.com',
     dialect: 'postgres',
-    use_env_variable: DATABASE_URL,
+    use_env_variable: 'DATABASE_URL',
     dialectOptions: {
       "ssl": {
         "require": true,
