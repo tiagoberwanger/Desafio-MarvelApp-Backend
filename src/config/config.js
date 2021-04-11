@@ -31,7 +31,7 @@ module.exports = {
     database: 'dgvo7tudsso2s',
     host: 'ec2-54-224-120-186.compute-1.amazonaws.com',
     dialect: 'postgres',
-    use_env_variable: 'postgres://zfigpyxltlqmmv:278bb11c6a017c188a8d3de1cdbbf4f4274052bfc13614cf08e5c5fc1950e995@ec2-54-224-120-186.compute-1.amazonaws.com:5432/dgvo7tudsso2s',
+    use_env_variable: DATABASE_URL,
     dialectOptions: {
       "ssl": {
         "require": true,
@@ -45,7 +45,7 @@ module.exports = {
     database: 'dgvo7tudsso2s',
     host: 'ec2-54-224-120-186.compute-1.amazonaws.com',
     dialect: 'postgres',
-    use_env_variable: 'postgres://zfigpyxltlqmmv:278bb11c6a017c188a8d3de1cdbbf4f4274052bfc13614cf08e5c5fc1950e995@ec2-54-224-120-186.compute-1.amazonaws.com:5432/dgvo7tudsso2s',
+    use_env_variable: DATABASE_URL,
     dialectOptions: {
       "ssl": {
         "require": true,
@@ -59,7 +59,7 @@ module.exports = {
     database: 'dgvo7tudsso2s',
     host: 'ec2-54-224-120-186.compute-1.amazonaws.com',
     dialect: 'postgres',
-    use_env_variable: 'postgres://zfigpyxltlqmmv:278bb11c6a017c188a8d3de1cdbbf4f4274052bfc13614cf08e5c5fc1950e995@ec2-54-224-120-186.compute-1.amazonaws.com:5432/dgvo7tudsso2s',
+    use_env_variable: DATABASE_URL,
     dialectOptions: {
       "ssl": {
         "require": true,
