@@ -12,12 +12,7 @@ const NOT_FOUND = 404;
 
 const getAllCharacters = async (req, res) => {
   const characters = await allCharacters();
-  try {
-    res.status(STATUS_OK).json(characters);
-  } catch (error) {
-    console.log(error.message)
-  }
-  
+  res.status(STATUS_OK).json(characters);
 }
 
 const getCharacterById = async (req, res) => {
