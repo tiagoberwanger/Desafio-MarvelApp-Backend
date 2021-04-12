@@ -30,14 +30,14 @@ $ cd Desafio-Stone-Backend/
 $ npm install
 
 ### Crie um arquivo .env e insira o seguinte conteúdo:
-PORT=3001
-MYSQL_USER=(seu username)
-MYSQL_PASSWORD=(seu password)
-DATABASE=marvel_api
-HOSTNAME=localhost
-TS=1
-PRIVATE_KEY=003cdef8d94e3982ce7d6316de95bb6d6f9c0ee1
-PUBLIC_KEY=95418ebca9cf702b7f32d48ad8d102ec
+PORT=3001  
+MYSQL_USER=(seu username)  
+MYSQL_PASSWORD=(seu password)  
+DATABASE=marvel_api  
+HOSTNAME=localhost  
+TS=1  
+PRIVATE_KEY=003cdef8d94e3982ce7d6316de95bb6d6f9c0ee1  
+PUBLIC_KEY=95418ebca9cf702b7f32d48ad8d102ec  
 
 ### Execute a aplicação 
 $ npm start
