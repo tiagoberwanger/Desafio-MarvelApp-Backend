@@ -31,8 +31,8 @@ $ npm install
 
 ### Crie um arquivo .env e insira o seguinte conteúdo:
 PORT=3001
-MYSQL_USER=<seu username>
-MYSQL_PASSWORD=<seu password>
+MYSQL_USER=(seu username)
+MYSQL_PASSWORD=(seu password)
 DATABASE=marvel_api
 HOSTNAME=localhost
 TS=1
