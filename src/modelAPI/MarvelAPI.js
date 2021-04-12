@@ -6,7 +6,6 @@ const hashResult = hash();
 const allCharacters = async () =>{
   const characters = await fetch(`https://gateway.marvel.com:443/v1/public/characters?limit=100&ts=${ts}&apikey=${publicKey}&hash=${hashResult}`,{ method: "GET", headers:{ "Content-Type": "application/json"}})
   .then((response)=>response.json());
-  console.log(characters)
   return characters.data.results;
 }
 
@@ -25,7 +24,6 @@ const allComics = async () =>{
 const comicById = async (id) =>{
   const comic = await fetch(`https://gateway.marvel.com:443/v1/public/comics?limit=1&ts=${ts}&apikey=${publicKey}&hash=${hashResult}&id=${id}`,{ method: "GET", headers:{ "Content-Type": "application/json"}})
   .then((response)=>response.json())
-  console.log(comic)
   return comic.data.results;
 }
 

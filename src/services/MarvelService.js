@@ -5,7 +5,6 @@ const NOT_FOUND = 404;
 
 const getAllCharacters = async (req, res) => {
   const characters = await allCharacters();
-  console.log(req.headers)
   try {
     res.status(STATUS_OK).json(characters);
   } catch (error) {
