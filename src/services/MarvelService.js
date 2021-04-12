@@ -1,4 +1,11 @@
-const { characterById, allCharacters, allComics, comicById } = require('../modelAPI/MarvelAPI')
+const { 
+  characterById, 
+  allCharacters, 
+  allComics, 
+  comicById, 
+  characterBySearchTerm,
+  comicBySearchTerm
+} = require('../modelAPI/MarvelAPI')
 
 const STATUS_OK = 200;
 const NOT_FOUND = 404;
@@ -36,9 +43,23 @@ const getComicById = async (req, res) => {
   return res.status(STATUS_OK).json(comic);
 }
 
+const getCharacterBySearchTerm = async (req, res) => {
+  const { q } = req.query;
+  const characterStartsWith = await characterBySearchTerm(q);
+  return res.status(STATUS_OK).json(characterStartsWith);
+}
+
+const getComicBySearchTerm = async (req, res) => {
+  const { q } = req.query;
+  const comicStartsWith = await comicBySearchTerm(q);
+  return res.status(STATUS_OK).json(comicStartsWith);
+}
+
 module.exports = {
   getAllCharacters,
   getCharacterById,
   getAllComics,
-  getComicById
+  getComicById,
+  getCharacterBySearchTerm,
+  getComicBySearchTerm,
 };

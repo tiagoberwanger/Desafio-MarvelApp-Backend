@@ -27,9 +27,23 @@ const comicById = async (id) =>{
   return comic.data.results;
 }
 
+const characterBySearchTerm = async (name) => {
+  const characterStartsWith = await fetch(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${name}&ts=${ts}&apikey=${publicKey}&hash=${hashResult}`,{ method: "GET", headers:{ "Content-Type": "application/json"}})
+  .then((response)=>response.json())
+  return characterStartsWith;
+}
+
+const comicBySearchTerm = async (title) => {
+  const comicStartsWith = await fetch(`https://gateway.marvel.com:443/v1/public/comics?titleStartsWith=${title}&ts=${ts}&apikey=${publicKey}&hash=${hashResult}`,{ method: "GET", headers:{ "Content-Type": "application/json"}})
+  .then((response)=>response.json())
+  return comicStartsWith;
+}
+
 module.exports = {
   characterById,
   allCharacters,
   allComics,
-  comicById
+  comicById,
+  characterBySearchTerm,
+  comicBySearchTerm,
 };
