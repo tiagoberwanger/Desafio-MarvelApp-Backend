@@ -25,6 +25,7 @@ require('dotenv').config();
 //   },
 // };
 
+// deploy
 // teste no Heroku
 module.exports = {
   development: {
