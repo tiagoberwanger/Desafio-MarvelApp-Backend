@@ -5,10 +5,10 @@ const MarvelController = require('./src/controllers/MarvelController')
 const UserController = require('./src/controllers/UserController')
 const LoginController = require('./src/controllers/LoginController')
 const port = process.env.PORT || 3001
+require('dotenv').config();
 
 app.use(cors({
-  // origin: 'http://localhost:3000',
-  origin: 'https://marvel-app-ft.herokuapp.com', 
+  origin: process.env.CORS, 
   methods: ['GET', 'POST']
 }));
 

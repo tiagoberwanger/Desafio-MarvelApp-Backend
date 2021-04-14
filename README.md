@@ -41,6 +41,7 @@ MYSQL_USER=(seu username)
 MYSQL_PASSWORD=(seu password)  
 DATABASE=marvel_api  
 HOSTNAME=localhost  
+CORS=http://localhost:3000  
 TS=1  
 PRIVATE_KEY=(sua private key)  
 PUBLIC_KEY=(sua public key)  
