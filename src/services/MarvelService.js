@@ -6,13 +6,15 @@ const {
   characterBySearchTerm,
   comicBySearchTerm
 } = require('../modelAPI/MarvelAPI')
+const { serializeCharacters, serializeComics } = require('../utils/serializer')
 
 const STATUS_OK = 200;
 const NOT_FOUND = 404;
 
 const getAllCharacters = async (req, res) => {
   const characters = await allCharacters();
-  res.status(STATUS_OK).json(characters);
+  const assets = serializeCharacters(characters);
+  res.status(STATUS_OK).json(assets);
 }
 
 const getCharacterById = async (req, res) => {
@@ -26,7 +28,8 @@ const getCharacterById = async (req, res) => {
 
 const getAllComics = async (req, res) => {
   const comics = await allComics();
-  return res.status(STATUS_OK).json(comics);
+  const assets = serializeComics(comics);
+  return res.status(STATUS_OK).json(assets);
 }
 
 const getComicById = async (req, res) => {

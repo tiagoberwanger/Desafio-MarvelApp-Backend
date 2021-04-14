@@ -1,5 +1,6 @@
 const { Users } = require('../models');
 const TokenCreation = require('../auth/TokenCreation');
+const { serializeCharacters, serializeComics } = require('../utils/serializer')
 
 const STATUS_OK = 200;
 const STATUS_BAD_REQUEST = 400;
