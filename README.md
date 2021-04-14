@@ -35,6 +35,10 @@ $ cd Desafio-Stone-Backend/
 ### Instale as dependências
 $ npm install
 
+### Rode os comandos do sequelize
+$ npx sequelize db:create
+$ npx sequelize db:migrate
+
 ### Crie um arquivo .env e insira o seguinte conteúdo:
 PORT=3001  
 MYSQL_USER=(seu username)  
