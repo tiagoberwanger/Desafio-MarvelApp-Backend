@@ -20,6 +20,12 @@
 
 # Pré-requisitos e como rodar a aplicação localmente
 
+## Pré-requisitos
+
+Instalar o [NodeJS](https://nodejs.org/pt-br/download/package-manager/) na sua máquina.
+Instalar o [MySQL](https://www.alura.com.br/artigos/mysql-do-download-e-instalacao-ate-sua-primeira-tabela) em sua máquina e gerar um **username** e **password**.
+Fazer um cadastro na [MarvelAPI](https://developer.marvel.com/) e gerar sua **public key** e **private key**.
+
 ### Clone este repositório
 $ git clone <https://github.com/tiagoberwanger/Desafio-Stone-Backend.git>
 
@@ -36,8 +42,8 @@ MYSQL_PASSWORD=(seu password)
 DATABASE=marvel_api  
 HOSTNAME=localhost  
 TS=1  
-PRIVATE_KEY=003cdef8d94e3982ce7d6316de95bb6d6f9c0ee1  
-PUBLIC_KEY=95418ebca9cf702b7f32d48ad8d102ec  
+PRIVATE_KEY=(sua private key) 
+PUBLIC_KEY=(sua public key) 
 
 ### Execute a aplicação 
 $ npm start
@@ -53,7 +59,12 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Joi](https://joi.dev/api/?v=17.4.0)
 - [JWT](https://jwt.io/)
 - [Sequelize](https://sequelize.org/)
-- [PostgresSQL](https://www.postgresql.org/)
+- [MySQL](https://www.mysql.com/) *teste local
+- [PostgresSQL](https://www.postgresql.org/) *deploy no Heroku
+
+# Submissão
+
+A submissão desse projeto foi feita no [Heroku](https://heroku.com/), e está pronta pra uso no seguinte [link](https://marvel-app-bk.herokuapp.com/)
 
 # Autor
 
