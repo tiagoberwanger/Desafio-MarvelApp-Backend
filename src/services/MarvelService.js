@@ -46,13 +46,15 @@ const getComicById = async (req, res) => {
 const getCharacterBySearchTerm = async (req, res) => {
   const { q } = req.query;
   const characterStartsWith = await characterBySearchTerm(q);
-  return res.status(STATUS_OK).json(characterStartsWith);
+  const asset = serializeCharacters(characterStartsWith.data.results);
+  return res.status(STATUS_OK).json(asset);
 }
 
 const getComicBySearchTerm = async (req, res) => {
   const { q } = req.query;
   const comicStartsWith = await comicBySearchTerm(q);
-  return res.status(STATUS_OK).json(comicStartsWith);
+  const asset = serializeComics(comicStartsWith.data.results);
+  return res.status(STATUS_OK).json(asset);
 }
 
 module.exports = {
