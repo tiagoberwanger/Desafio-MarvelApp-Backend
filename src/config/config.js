@@ -25,7 +25,7 @@ require('dotenv').config();
 //   },
 // };
 
-teste no Heroku
+// teste no Heroku
 module.exports = {
   development: {
     username: process.env.PG_USER,
