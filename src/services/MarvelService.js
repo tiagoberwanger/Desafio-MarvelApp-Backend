@@ -20,10 +20,11 @@ const getAllCharacters = async (req, res) => {
 const getCharacterById = async (req, res) => {
   const { id } = req.params;
   const character = await characterById(id);
+  const asset = serializeCharacters(character);
   if (!character) {
     return res.status(NOT_FOUND).json({ message: 'Personagem não encontrado' })
   }
-  return res.status(STATUS_OK).json(character);
+  return res.status(STATUS_OK).json(asset);
 }
 
 const getAllComics = async (req, res) => {
@@ -35,10 +36,11 @@ const getAllComics = async (req, res) => {
 const getComicById = async (req, res) => {
   const { id } = req.params;
   const comic = await comicById(id);
+  const asset = serializeComics(comic);
   if (!comic) {
     return res.status(NOT_FOUND).json({ message: 'Comic não encontrado' })
   }
-  return res.status(STATUS_OK).json(comic);
+  return res.status(STATUS_OK).json(asset);
 }
 
 const getCharacterBySearchTerm = async (req, res) => {
