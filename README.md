@@ -49,10 +49,9 @@ PUBLIC_KEY=(sua public key)
 $ npx sequelize db:create  
 $ npx sequelize db:migrate  
 $ npx sequelize db:seed:all  
-(Esse último comando habilita um usuário teste com as seguintes credenciais:  
-  email: "teste@email.com",  
+PS: Esse último comando habilita um usuário teste com as seguintes credenciais:  
+  email: teste@email.com  
   password: 123456  
-)
 
 
 ### Execute a aplicação 
