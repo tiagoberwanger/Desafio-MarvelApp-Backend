@@ -22,9 +22,9 @@
 
 ## Pré-requisitos
 
-Instalar o [NodeJS](https://nodejs.org/pt-br/download/package-manager/) na sua máquina.
-Instalar o [MySQL](https://www.alura.com.br/artigos/mysql-do-download-e-instalacao-ate-sua-primeira-tabela) em sua máquina e gerar um **username** e **password**.
-Fazer um cadastro na [MarvelAPI](https://developer.marvel.com/) e gerar sua **public key** e **private key**.
+Instalar o [NodeJS](https://nodejs.org/pt-br/download/package-manager/) na sua máquina.  
+Instalar o [MySQL](https://www.alura.com.br/artigos/mysql-do-download-e-instalacao-ate-sua-primeira-tabela) em sua máquina e gerar um **username** e **password**.  
+Fazer um cadastro na [MarvelAPI](https://developer.marvel.com/) e gerar sua **public key** e **private key**.  
 
 ### Clone este repositório
 $ git clone <https://github.com/tiagoberwanger/Desafio-Stone-Backend.git>
@@ -42,8 +42,8 @@ MYSQL_PASSWORD=(seu password)
 DATABASE=marvel_api  
 HOSTNAME=localhost  
 TS=1  
-PRIVATE_KEY=(sua private key) 
-PUBLIC_KEY=(sua public key) 
+PRIVATE_KEY=(sua private key)  
+PUBLIC_KEY=(sua public key)  
 
 ### Execute a aplicação 
 $ npm start
