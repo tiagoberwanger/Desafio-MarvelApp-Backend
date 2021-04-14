@@ -6,7 +6,11 @@ const UserController = require('./src/controllers/UserController')
 const LoginController = require('./src/controllers/LoginController')
 const port = process.env.PORT || 3001
 
-app.use(cors());
+app.use(cors({
+  // origin: 'http://localhost:3001',
+  origin: 'https://marvel-app-bk.herokuapp.com/', 
+  methods: ['GET', 'POST']
+}));
 
 app.use(express.json());
 
