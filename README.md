@@ -35,10 +35,6 @@ $ cd Desafio-Stone-Backend/
 ### Instale as dependências
 $ npm install
 
-### Rode os comandos do sequelize
-$ npx sequelize db:create
-$ npx sequelize db:migrate
-
 ### Crie um arquivo .env e insira o seguinte conteúdo:
 PORT=3001  
 MYSQL_USER=(seu username)  
@@ -48,6 +44,16 @@ HOSTNAME=localhost
 TS=1  
 PRIVATE_KEY=(sua private key)  
 PUBLIC_KEY=(sua public key)  
+
+### Rode os comandos do sequelize  
+$ npx sequelize db:create  
+$ npx sequelize db:migrate  
+$ npx sequelize db:seed:all  
+(Esse último comando habilita um usuário teste com as seguintes credenciais:  
+  email: "teste@email.com",  
+  password: 123456  
+)
+
 
 ### Execute a aplicação 
 $ npm start
